@@ -1,0 +1,87 @@
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.landing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hero-image {
+  max-width: 50vw;
+  margin: auto;
+  margin-left: 0;
+}
+
+.landing-info {
+  margin: 10%;
+  position: fixed;
+  top: 15%;
+  left: 55%;
+}
+
+.menu {
+  display: inline-flex;
+  position: fixed;
+  top: 80px;
+  right: 80px;
+}
+
+.menu h3 {
+  margin: 0 30px 0 30px;
+  font-weight: 300;
+}
+
+.menu a {
+  color: #0f4c81;
+}
+
+.menu a:visited {
+  color: #0f4c81;
+}
+
+.title {
+  margin-bottom: 50px;
+  color: #0f4c81;
+}
+
+.subtitle {
+  text-align: justify;
+  font-weight: 300;
+}
+
+.bottom-link {
+  bottom: 30px;
+  right: 80px;
+  position: fixed;
+  display: grid;
+}
+
+.bottom-link a {
+  color: #6f93b3;
+}
+
+.bottom-link a:hover {
+  color: #0f4c81;
+}
+
+.bottom-link a:visited {
+  color: #0f4c81;
+}
+
+.bottom-link img {
+  margin-top: -20px;
+  width: 70px;
+  height: 70px;
+}
+
+/*# sourceMappingURL=style.css.map */

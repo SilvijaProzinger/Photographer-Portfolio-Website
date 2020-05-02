@@ -1,0 +1,98 @@
+$colors: (
+	shadow: #0c3c67,
+	main: #0f4c81,
+	tint: #6f93b3,
+	light: #b7c9d9
+);
+
+$weight: 300;
+
+@function color($color-name){
+	@return map-get($colors, $color-name);
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.landing {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.hero-image {
+	max-width: 50vw;
+  	margin: auto;
+  	margin-left: 0;
+}
+
+.landing-info {
+	margin: 10%;
+	position: fixed;
+    top: 15%;
+    left: 55%;
+}
+
+.menu {
+	display: inline-flex;
+	position: fixed;
+	top: 80px;
+	right: 80px;
+}
+
+.menu h3 {
+	margin: 0 30px 0 30px;
+	font-weight: $weight;
+}
+
+.menu a {
+	color: color(main);
+}
+
+.menu a:visited {
+	color: color(main);
+}
+
+.title {
+	margin-bottom: 50px;
+	color: color(main);
+}
+
+.subtitle {
+	text-align: justify;
+	font-weight: $weight;
+}
+
+.bottom-link {
+	bottom: 30px;
+	right: 80px;
+	position: fixed;
+	display: grid;
+}
+
+.bottom-link a {
+	color: color(tint);
+}
+
+.bottom-link a:hover {
+	color: color(main);
+}
+
+.bottom-link a:visited {
+	color: color(main);
+}
+
+.bottom-link img {
+	margin-top: -20px;
+	width: 70px;
+	height: 70px;
+}
