@@ -23,6 +23,8 @@ a {
 	text-decoration: none;
 }
 
+/* landing page */
+
 .landing {
 	display: flex;
 	flex-direction: row;
@@ -65,6 +67,7 @@ a {
 .title {
 	margin-bottom: 50px;
 	color: color(main);
+	text-align: center;
 }
 
 .subtitle {
@@ -73,10 +76,11 @@ a {
 }
 
 .bottom-link {
-	bottom: 30px;
+	bottom: 25px;
 	right: 80px;
 	position: fixed;
 	display: grid;
+	cursor: pointer;
 }
 
 .bottom-link a {
@@ -95,4 +99,10 @@ a {
 	margin-top: -20px;
 	width: 70px;
 	height: 70px;
+}
+
+/* portfolio page */
+
+.work {
+	display: none;
 }
