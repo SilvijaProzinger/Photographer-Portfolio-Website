@@ -5,7 +5,14 @@ let workButtons = document.getElementsByClassName('work-link')
 
 //on hovering the arrow replace the image with arrow of stronger color
 document.getElementById('arrow-right').addEventListener('mouseover', function(){
-	console.log('replace')
+	document.getElementById('arrow-right').src = './images/icons8-right-arrow-100-1.png'
+	document.getElementById('work-link-text').style.color = '#0f4c81'
+})
+
+//on unhovering the arrow returns to normal, lighter color
+document.getElementById('arrow-right').addEventListener('mouseout', function(){
+	document.getElementById('arrow-right').src = './images/icons8-right-arrow-100.png'
+	document.getElementById('work-link-text').style.color = '#6f93b3'
 })
 
 /*on hovering the arrow replace the image with arrow of stronger color
