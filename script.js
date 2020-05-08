@@ -1,17 +1,37 @@
-$('.work-link').on('click', function(){
+/*$('.work-link').on('click', function(){
 		$('#landing').css({display: 'none'})
+		$('#about').css({display: 'none'})
 		$('#work').css({display: 'block'})
 })
 
+$('.about-link').on('click', function(){
+		$('#landing').css({display: 'none'})
+		$('#work').css({display: 'none'})
+		$('#about').css({display: 'block'})
+})
+*/
+
 //on hovering the arrow replace the image with arrow of stronger color
 $('#arrow-right').on('mouseover', function(){
-	$('#arrow-right').attr('src','./images/icons8-right-arrow-100-1.png')
+	$('.work-link').attr('src','./images/icons8-right-arrow-100-1.png')
 	$('#work-link-text').css({color: '#0f4c81'}) 
 })
 
 //on unhovering the arrow replace the image with the original, lighter one
 $('#arrow-right').on('mouseout', function(){
-	$('#arrow-right').attr('src','./images/icons8-right-arrow-100.png')
+	$('.work-link').attr('src','./images/icons8-right-arrow-100.png')
+	$('#work-link-text').css({color: '#6f93b3'}) 
+})
+
+//on hovering the arrow replace the image with arrow of stronger color
+$('#arrow-left').on('mouseover', function(){
+	$('.work-link-home').attr('src','./images/icons8-left-arrow-100-1.png')
+	$('#work-link-text').css({color: '#0f4c81'}) 
+})
+
+//on unhovering the arrow replace the image with the original, lighter one
+$('#arrow-left').on('mouseout', function(){
+	$('.work-link-home').attr('src','./images/icons8-left-arrow-100.png')
 	$('#work-link-text').css({color: '#6f93b3'}) 
 })
 
@@ -21,15 +41,15 @@ $(".images").each(function(index) {
     lastChild = $(this).children(".carousel-item:last")
 });
 
+//on hovering the left arrow replace it with a more vibrant icon
+$('#left').on('mouseover', function(){
+	$('#left').attr('src', './images/icons8-chevron-left-52-1.png')
+})
 
-/*function swap(a, b) {
-    a = $(a); b = $(b);
-    var tmp = $('<span>').hide();
-    a.before(tmp);
-    b.before(a);
-    tmp.replaceWith(b);
-};
-*/
+//on unhovering the left arrow replace it with a regular icon
+$('#left').on('mouseout', function(){
+	$('#left').attr('src', './images/icons8-chevron-left-52.png')
+})
 
 //on clicking the left arrow in carousel, go left
 $('#left').on('click', function(){
@@ -43,8 +63,30 @@ $('#left').on('click', function(){
 		active.removeClass('central').addClass('small')
 		previous.addClass('central').removeClass('small')
 	}
+
+	let descriptions = $('.images-descriptions')
+
+	//show description for each image
+	descriptions.each(function(index){
+		if (descriptions.index() === $('.central').index()){
+			console.log(descriptions.index())
+			$('.descr').css({display: 'block'})
+	}
+	})
+
 })
 
+//on hovering the left arrow replace it with a more vibrant icon
+$('#right').on('mouseover', function(){
+	$('#right').attr('src', './images/icons8-chevron-right-52-1.png')
+})
+
+//on unhovering the left arrow replace it with a regular icon
+$('#right').on('mouseout', function(){
+	$('#right').attr('src', './images/icons8-chevron-right-52.png')
+})
+
+//on clicking the right arrow go right
 $('#right').on('click', function(){
 	let active = $('.central')
 	let next = active.next()
@@ -58,5 +100,20 @@ $('#right').on('click', function(){
 	}
 })
 
+$('.icon-one').on('mouseover', function(){
+	$('.icon-one').attr('src', 'images/icons8-linkedin-80-1.png')
+})
 
+$('.icon-one').on('mouseout', function(){
+	$('.icon-one').attr('src', 'images/icons8-linkedin-80.png')
+})
 
+$('.icon-two').on('mouseover', function(){
+	$('.icon-two').attr('src', 'images/icons8-gmail-96-1.png')
+
+})
+
+$('.icon-two').on('mouseout', function(){
+	$('.icon-two').attr('src', 'images/icons8-gmail-96.png')
+
+})
