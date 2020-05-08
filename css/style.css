@@ -138,14 +138,19 @@ a {
 .images-descriptions {
   text-align: center;
   padding: 50px;
+  margin-bottom: 7%;
 }
 
 .image-title {
   color: #0f4c81;
 }
 
-.descr {
+.hidden {
   display: none;
+}
+
+.shown {
+  display: block;
 }
 
 .arrows {

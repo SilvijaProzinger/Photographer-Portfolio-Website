@@ -1,16 +1,3 @@
-/*$('.work-link').on('click', function(){
-		$('#landing').css({display: 'none'})
-		$('#about').css({display: 'none'})
-		$('#work').css({display: 'block'})
-})
-
-$('.about-link').on('click', function(){
-		$('#landing').css({display: 'none'})
-		$('#work').css({display: 'none'})
-		$('#about').css({display: 'block'})
-})
-*/
-
 //on hovering the arrow replace the image with arrow of stronger color
 $('#arrow-right').on('mouseover', function(){
 	$('.work-link').attr('src','./images/icons8-right-arrow-100-1.png')
@@ -23,13 +10,11 @@ $('#arrow-right').on('mouseout', function(){
 	$('#work-link-text').css({color: '#6f93b3'}) 
 })
 
-//on hovering the arrow replace the image with arrow of stronger color
 $('#arrow-left').on('mouseover', function(){
 	$('.work-link-home').attr('src','./images/icons8-left-arrow-100-1.png')
 	$('#work-link-text').css({color: '#0f4c81'}) 
 })
 
-//on unhovering the arrow replace the image with the original, lighter one
 $('#arrow-left').on('mouseout', function(){
 	$('.work-link-home').attr('src','./images/icons8-left-arrow-100.png')
 	$('#work-link-text').css({color: '#6f93b3'}) 
@@ -67,13 +52,15 @@ $('#left').on('click', function(){
 	let descriptions = $('.images-descriptions')
 
 	//show description for each image
-	descriptions.each(function(index){
-		if (descriptions.index() === $('.central').index()){
-			console.log(descriptions.index())
-			$('.descr').css({display: 'block'})
-	}
+	descriptions.each(function(index, element){
+		let idValue = $(this).attr('id')
+		console.log(idValue)
+		if ($(this).attr('id') === $('.central').index()){
+			$(this).removeClass('hidden').addClass('shown')
+		}
+		console.log($('.central').index())
+		console.log($(this).attr('id'))
 	})
-
 })
 
 //on hovering the left arrow replace it with a more vibrant icon
