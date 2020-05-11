@@ -36,6 +36,16 @@ $('#left').on('mouseout', function(){
 	$('#left').attr('src', './images/icons8-chevron-left-52.png')
 })
 
+//on hovering the left arrow replace it with a more vibrant icon
+$('#right').on('mouseover', function(){
+	$('#right').attr('src', './images/icons8-chevron-right-52-1.png')
+})
+
+//on unhovering the left arrow replace it with a regular icon
+$('#right').on('mouseout', function(){
+	$('#right').attr('src', './images/icons8-chevron-right-52.png')
+})
+
 //on clicking the left arrow in carousel, go left
 $('#left').on('click', function(){
 	let active = $('.central')
@@ -48,29 +58,7 @@ $('#left').on('click', function(){
 		active.removeClass('central').addClass('small')
 		previous.addClass('central').removeClass('small')
 	}
-
-	let descriptions = $('.images-descriptions')
-
-	//show description for each image
-	descriptions.each(function(index, element){
-		let idValue = $(this).attr('id')
-		console.log(idValue)
-		if ($(this).attr('id') === $('.central').index()){
-			$(this).removeClass('hidden').addClass('shown')
-		}
-		console.log($('.central').index())
-		console.log($(this).attr('id'))
-	})
-})
-
-//on hovering the left arrow replace it with a more vibrant icon
-$('#right').on('mouseover', function(){
-	$('#right').attr('src', './images/icons8-chevron-right-52-1.png')
-})
-
-//on unhovering the left arrow replace it with a regular icon
-$('#right').on('mouseout', function(){
-	$('#right').attr('src', './images/icons8-chevron-right-52.png')
+	showDescription()
 })
 
 //on clicking the right arrow go right
@@ -85,7 +73,22 @@ $('#right').on('click', function(){
 		active.removeClass('central').addClass('small')
 		next.addClass('central').removeClass('small')
 	}
+	showDescription()
 })
+
+const showDescription = () => {
+	let shown = $('.shown')
+	
+	//show description for each image
+	$('.images-descriptions').find('div').each(function(){
+		let idValue = $(this).attr('id')
+		if (idValue == $('.central').index()){
+		    console.log(idValue)
+			$(this).removeClass('hidden').addClass('shown')
+			shown.removeClass('shown').addClass('hidden')
+		}
+	})
+}
 
 $('.icon-one').on('mouseover', function(){
 	$('.icon-one').attr('src', 'images/icons8-linkedin-80-1.png')
