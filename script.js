@@ -78,7 +78,7 @@ $('#right').on('click', function(){
 
 const showDescription = () => {
 	let shown = $('.shown')
-	
+
 	//show description for each image
 	$('.images-descriptions').find('div').each(function(){
 		let idValue = $(this).attr('id')
@@ -107,3 +107,4 @@ $('.icon-two').on('mouseout', function(){
 	$('.icon-two').attr('src', 'images/icons8-gmail-96.png')
 
 })
+

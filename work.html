@@ -1,56 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="animated fadeInRight">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Welcome...</title>
 </head>
 <body>
-	<div class="work" id="work">
-		<div class="carousel">
-			<img class="carousel-arrow" id="left" alt="left" src="images/icons8-chevron-left-52.png">
-			<div class="images">
-				<!-- credits written in alt property -->
-				<img class="carousel-item small" src="images/alin-rusu-dSaSitEikE4-unsplash.jpg" alt="alin rusu on unsplash">
-				<img class="carousel-item small" src="images/chunyu-zhang-qoiZF6Um0_U-unsplash.jpg" alt="chunyu zhang on unsplash">
-				<img class="carousel-item central" src="images/bryce-barker-vQovVa49c3Y-unsplash.jpg" alt="bryce barker on unsplash">
-				<img class="carousel-item small" src="images/jeremy-gallman-Id2f5Y9dq1g-unsplash.jpg" alt="jeremy gallman on unsplash">
-				<img class="carousel-item small" src="images/stephan-valentin-r74II0tE7tc-unsplash.jpg" alt="stephan valentin on unsplash">
+	<div class="work animate__animated animate__fadeInRight">
+		<div class="page">
+			<div class="carousel">
+				<img class="carousel-arrow" id="left" alt="left" src="images/icons8-chevron-left-52.png">
+				<div class="images">
+					<!-- credits written in alt property -->
+					<img class="carousel-item small" src="images/alin-rusu-dSaSitEikE4-unsplash.jpg" alt="alin rusu on unsplash">
+					<img class="carousel-item small" src="images/chunyu-zhang-qoiZF6Um0_U-unsplash.jpg" alt="chunyu zhang on unsplash">
+					<img class="carousel-item central" src="images/bryce-barker-vQovVa49c3Y-unsplash.jpg" alt="bryce barker on unsplash">
+					<img class="carousel-item small" src="images/jeremy-gallman-Id2f5Y9dq1g-unsplash.jpg" alt="jeremy gallman on unsplash">
+					<img class="carousel-item small" src="images/stephan-valentin-r74II0tE7tc-unsplash.jpg" alt="stephan valentin on unsplash">
+				</div>
+				<img class="carousel-arrow" id="right" alt="right" src="images/icons8-chevron-right-52.png">
 			</div>
-			<img class="carousel-arrow" id="right" alt="right" src="images/icons8-chevron-right-52.png">
-		</div>
-		<div class="images-descriptions">
-			<div class="descr hidden" id="0">
-				<h3 class="image-title">Heard of brown horses on icy mountain</h3>
-				<h4 class="image-desc">Reykholt, Iceland</h4>
+			<div class="images-descriptions">
+				<div class="descr hidden" id="0">
+					<h3 class="image-title">Heard of brown horses on icy mountain</h3>
+					<h4 class="image-desc">Reykholt, Iceland</h4>
+				</div>
+				<div class="descr hidden" id="1">
+					<h3 class="image-title">Rock formations in sea</h3>
+					<h4 class="image-desc">Unknown location</h4>
+				</div>
+				<div class="descr shown" id="2">
+					<h3 class="image-title">Statue of Liberty at daytime</h3>
+					<h4 class="image-desc">New York, United States</h4>
+				</div>
+				<div class="descr hidden" id="3">
+					<h3 class="image-title">Brown top road and rock mountains</h3>
+					<h4 class="image-desc">Palm Springs tramway</h4>
+				</div>
+				<div class="descr hidden" id="4">
+					<h3 class="image-title">Grey vending machine</h3>
+					<h4 class="image-desc">Unknown location</h4>
+				</div>
 			</div>
-			<div class="descr hidden" id="1">
-				<h3 class="image-title">Rock formations in sea</h3>
-				<h4 class="image-desc">Unknown location</h4>
-			</div>
-			<div class="descr shown" id="2">
-				<h3 class="image-title">Statue of Liberty at daytime</h3>
-				<h4 class="image-desc">New York, United States</h4>
-			</div>
-			<div class="descr hidden" id="3">
-				<h3 class="image-title">Brown top road and rock mountains</h3>
-				<h4 class="image-desc">Palm Springs tramway</h4>
-			</div>
-			<div class="descr hidden" id="4">
-				<h3 class="image-title">Grey vending machine</h3>
-				<h4 class="image-desc">Unknown location</h4>
-			</div>
-		</div>
-		<div class="arrows">
-			<div class="bottom-link-wide" id="arrow-left">
-				<a href="index.html" id="work-link-text">HOME</a>
-				<img src="images/icons8-left-arrow-100.png" alt="go to home page" class="work-link-home"> <!-- icons credit to icons8 -->
-			</div>
-			<div class="bottom-link-wide" id="arrow-right">
-				<a href="about.html" id="work-link-text">ABOUT</a>
-				<img src="images/icons8-right-arrow-100.png" alt="go to about and contact page" class="work-link"> <!-- icons credit to icons8 -->
+			<div class="arrows">
+				<div class="bottom-link-wide" id="arrow-left">
+					<a href="index.html" id="prev-page">HOME</a>
+					<img src="images/icons8-left-arrow-100.png" alt="go to home page" class="work-link-home"> <!-- icons credit to icons8 -->
+				</div>
+				<div class="bottom-link-wide" id="arrow-right">
+					<a href="about.html" id="next-page">ABOUT</a>
+					<img src="images/icons8-right-arrow-100.png" alt="go to about and contact page" class="work-link"> <!-- icons credit to icons8 -->
+				</div>
 			</div>
 		</div>
 	</div>
