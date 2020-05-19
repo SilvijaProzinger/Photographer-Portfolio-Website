@@ -10,17 +10,52 @@ a {
   text-decoration: none;
 }
 
+@media only screen and (min-width: 1600px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 850px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    overflow-x: hidden;
+    align-items: center;
+  }
+}
+
 /* landing page */
 .landing {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+@media only screen and (max-width: 850px) {
+  .landing {
+    display: block;
+  }
+}
 
 .hero-image {
   max-width: 50vw;
   margin: auto;
   margin-left: 0;
+}
+@media only screen and (max-width: 850px) {
+  .hero-image {
+    display: none;
+  }
+}
+
+.smaller-image {
+  display: none;
+}
+@media only screen and (max-width: 850px) {
+  .smaller-image {
+    display: block;
+  }
 }
 
 .landing-info {
@@ -29,12 +64,30 @@ a {
   top: 11%;
   left: 55%;
 }
+@media only screen and (min-width: 850px) and (max-width: 950px) {
+  .landing-info {
+    margin: 7%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .landing-info {
+    top: 0;
+    left: 0;
+    position: relative;
+  }
+}
 
 .menu {
   display: inline-flex;
   position: fixed;
   top: 80px;
   right: 80px;
+}
+@media only screen and (min-width: 850px) and (max-width: 950px) {
+  .menu {
+    top: 30px;
+    right: 30px;
+  }
 }
 
 .menu h3 {
@@ -67,10 +120,14 @@ a {
 }
 
 .bottom-link {
-  bottom: 25px;
-  right: 80px;
   position: fixed;
   display: grid;
+  right: 20vw;
+}
+@media only screen and (max-width: 850px) {
+  .bottom-link {
+    right: 50vw;
+  }
 }
 
 .bottom-link a {
@@ -87,9 +144,15 @@ a {
 }
 
 .bottom-link img {
-  margin-top: -15px;
+  margin-top: -10px;
   width: 70px;
   height: 70px;
+}
+@media only screen and (min-width: 1600px) {
+  .bottom-link img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 /* portfolio page */
