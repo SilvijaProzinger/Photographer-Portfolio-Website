@@ -13,6 +13,7 @@ $weight: 300;
 
 html, body {
   width: 100%;
+  height: 100vh;
   overflow-x: hidden;
   padding: 0;
   margin:0;
@@ -34,7 +35,7 @@ body {
 		margin-right: auto;
 		margin-left: auto;
 		overflow-x: hidden;
-		align-items: center;
+		//align-items: center;
 	}
 }
 
@@ -49,6 +50,79 @@ body {
 	@media only screen and (max-width: 850px){
 		display: block;
 	}
+}
+
+.hamburger-menu {
+	width: 80px;
+	height: 80px;
+	display: none;
+
+	&:hover {
+		cursor: pointer;
+		width: 85px;
+		height: 85px;
+	}
+	
+	@media only screen and (max-width: 850px){
+		display: block;
+		position: absolute;
+		z-index: 1;
+		right: 20px;
+		top: 20px;
+	}
+
+}
+
+.x-icon {
+	height: 50px;
+	width: 50px;
+	display: none;
+
+	&:hover {
+		cursor: pointer;
+		height: 55px;
+		width: 55px;
+	}
+	
+	@media only screen and (max-width: 850px){
+		position: absolute;
+		z-index: 9;
+		right: 20px;
+		top: 20px;
+	}
+}
+
+.mobile-menu {
+	height: 100%;
+  	width: 0;
+ 	position: fixed;
+  	z-index: 1;
+  	top: 0;
+  	left: 0;
+  	background-color: white;
+  	overflow-x: hidden;
+  	transition: 0.5s;
+}
+
+.mobile-links {
+	position: relative;
+  	top: 25%;
+  	width: 100%;
+  	text-align: center;
+  	margin-top: 30px;
+}
+
+.mobile-link {
+  	padding: 20px;
+  	text-decoration: none;
+  	font-size: 36px;
+  	color: color(tint);
+  	display: block;
+  	transition: 0.3s;
+
+  	&:hover {
+  		color: color(shadow);
+  	}
 }
 
 .hero-image {
@@ -98,6 +172,12 @@ body {
 		top: 30px;
 		right: 30px;
 	}
+
+	@media only screen and (max-width: 850px){
+		display: none;
+	}
+
+
 }
 
 .menu h3 {
@@ -219,7 +299,7 @@ body {
 .central {
 	width: 230px;
 	height: 230px;
-	z-index: 9;
+	//z-index: 9;
 }
 
 .images-descriptions {
@@ -240,11 +320,31 @@ body {
 	display: block;
 }
 
+/*.arrow-container-one, .arrow-container-two {
+	position: fixed;
+    height: 300px;
+    background-color: white;
+    width: 200px;
+    z-index: 2;
+}
+
+.arrow-container-one {
+	left: 2%;
+}
+
+.arrow-container-two {
+	right: 2%;
+}
+*/
 .arrows {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	bottom: 25px;
+
+	@media only screen and (max-width: 850px){
+		display: none;
+	}
 }
 
 .bottom-link-wide {

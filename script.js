@@ -108,3 +108,12 @@ $('.icon-two').on('mouseout', function(){
 
 })
 
+$('#hamburgerIcon').on('click', function(){
+	$('.mobile-menu').css({width: '100%'})
+	$('#closeIcon').css({display: 'block'})
+})
+
+$('#closeIcon').on('click', function(){
+	$('.mobile-menu').css({width: '0'})
+	$('#closeIcon').css({display: 'none'})
+})
