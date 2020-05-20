@@ -16,15 +16,6 @@ a {
     font-size: 1.4rem;
   }
 }
-@media only screen and (max-width: 850px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    margin-right: auto;
-    margin-left: auto;
-    overflow-x: hidden;
-  }
-}
 
 /* landing page */
 .landing {
@@ -35,6 +26,17 @@ a {
 @media only screen and (max-width: 850px) {
   .landing {
     display: block;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    overflow-x: hidden;
+    align-items: center;
   }
 }
 
@@ -197,38 +199,32 @@ a {
 
 .bottom-link {
   position: fixed;
-  display: grid;
-  right: 20vw;
+  right: calc((50vw / 2) - 70px);
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 @media only screen and (max-width: 850px) {
   .bottom-link {
-    right: 50vw;
+    left: calc(50vw - 55px);
   }
 }
 
 .bottom-link a {
   color: #6f93b3;
   cursor: pointer;
+  border: 2px solid #6f93b3;
+  border-radius: 20px;
+  width: 20px;
+  padding: 10px;
 }
 
 .bottom-link a:hover {
   color: #0f4c81;
+  border: 2px solid #0f4c81;
 }
 
 .bottom-link a:visited {
   color: #0f4c81;
-}
-
-.bottom-link img {
-  margin-top: -10px;
-  width: 70px;
-  height: 70px;
-}
-@media only screen and (min-width: 1600px) {
-  .bottom-link img {
-    width: 100px;
-    height: 100px;
-  }
 }
 
 /* portfolio page */
@@ -412,10 +408,20 @@ a {
 .about {
   margin: 0 7% 0 7%;
 }
+@media only screen and (max-width: 650px) {
+  .about {
+    margin: 0;
+  }
+}
 
 .info {
   text-align: center;
   margin: 8% 20% 10% 20%;
+}
+@media only screen and (max-width: 650px) {
+  .info {
+    margin-top: 8%;
+  }
 }
 
 .about h2 {
@@ -441,7 +447,7 @@ a {
 }
 @media only screen and (max-width: 500px) {
   .about h4 {
-    margin: 5% 8% 5% 8%;
+    margin: 5%;
   }
 }
 
